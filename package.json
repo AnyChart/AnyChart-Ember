@@ -1,17 +1,30 @@
 {
   "name": "ember-anychart",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ember component for the AnyChart JavaScript charting library.",
   "keywords": [
-    "ember-addon"
+    "addon",
+    "ember-addon",
+    "charts",
+    "chart",
+    "charting",
+    "anychart",
+    "anycharts",
+    "graphs",
+    "graph",
+    "data",
+    "dashboards",
+    "dashboard",
+    "visualizations",
+    "wrapper"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "AnyChart",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/AnyChart/anychart-ember",
   "scripts": {
     "build": "ember build",
     "start": "ember server",

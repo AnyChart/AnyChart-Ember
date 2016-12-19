@@ -1,27 +1,48 @@
-# ember-anychart
+[<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
+AnyChart-Ember plugin
+=========================
 
-This README outlines the details of collaborating on this Ember addon.
+An AnyChart component for Ember CLI
+
+## Resources:
+// TODO: ...
+
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-anychart`
-* `npm install`
-* `bower install`
+* `npm install --save ember-anychart`
+* `ember g ember-anychart`
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Use the following custom element to a Handlebars template file:
 
-## Running Tests
+```handlebars
+{{ember-anychart instance=chart|stage}}
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+###Properties
+|    Property   |    Required?  | Type | Description  |
+| :------------- |:-------------:| :----:| :---- |
+| instance | required | Object | [Render method](http://www.anychart.com/docs/developers/anychart-object-and-methods/#render-method) configuration object used to configure the individual elements of a chart.|
 
-## Building
+The configuration object `renderOptions` is stored in tests/dummy/app/controllers/application.js.
 
-* `ember build`
+###Example Controller
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+```
+// TODO: ...
+```
+
+
+## Technologies
+// TODO: ...
+
+## Further Learning
+* [Documentation](https://docs.anychart.com)
+* [JavaScript API Reference](https://api.anychart.com)
+* [Code Playground](https://playground.anychart.com)
+* [Technical Support](https://anychart.com/support)
+
+## License
+[© AnyChart.com - JavaScript charts](http://www.anychart.com). Released under the [Apache 2.0 License](https://github.com/anychart-integrations/ruby-sinatra-mysql-template/blob/master/LICENSE).
