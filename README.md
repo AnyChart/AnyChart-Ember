@@ -24,9 +24,7 @@ Use the following custom element to a Handlebars template file:
 ###Properties
 |    Property   |    Required?  | Type | Description  |
 | :------------- |:-------------:| :----:| :---- |
-| instance | required | Object | [Render method](http://www.anychart.com/docs/developers/anychart-object-and-methods/#render-method) configuration object used to configure the individual elements of a chart.|
-
-The configuration object `renderOptions` is stored in tests/dummy/app/controllers/application.js.
+| instance | required | Object | Anychart's chart or stage instance |
 
 ###Example Controller
 
