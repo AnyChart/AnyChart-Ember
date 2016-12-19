@@ -16,7 +16,7 @@ export default Ember.Component.extend({
 
   _renderChart: function() {
     this.instance.container(this.elementId);
-    if(typeof this.instance.draw === 'function') {
+    if (typeof this.instance.draw === 'function') {
       this.instance.draw();
     }
   }
