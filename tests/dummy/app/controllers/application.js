@@ -109,11 +109,11 @@ let series = chart1.column([
 
 // set series tooltip settings
 series.tooltip().titleFormatter(function() {
-  return this.x
+  return this.x;
 });
 
 series.tooltip().textFormatter(function() {
-  return '$' + parseInt(this.value).toLocaleString()
+  return '$' + parseInt(this.value).toLocaleString();
 });
 series.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5);
 

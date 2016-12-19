@@ -22,7 +22,7 @@ Use the following custom element to a Handlebars template file:
 ```
 
 ###Properties
-|    Property   |    Required?  | Type | Description  |
+|    Property   |    Required  | Type | Description  |
 | :------------- |:-------------:| :----:| :---- |
 | instance | required | Object | Anychart's chart or stage instance |
 
