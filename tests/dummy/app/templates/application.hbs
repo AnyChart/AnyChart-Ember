@@ -9,20 +9,30 @@
     .ember-anychart {
         width: 600px;
         height: 500px;
-    }
-
-    #custom-styled-container {
-        border: 3px solid green;
+        border: 2px solid deepskyblue;
     }
 
     .class2 {
-        border: 3px dashed yellow;
+        border-style: dashed;
     }
 
     .class1 {
-        border-color: red !important;
+        border-color: red;
     }
 </style>
-<h2 id="title">Welcome to Ember.js + AnyChart</h2>
-{{ember-anychart instance=stageInstance class="class1 class2"}}
-{{ember-anychart instance=chartInstance id="custom-styled-container" class="class2"}}
+<h1 id="title">Welcome to Ember.js + AnyChart</h1>
+<div class="container">
+    <div class="menu">
+        <div class="links">
+            {{#link-to 'simple'}}
+                Simple chart
+            {{/link-to}}
+            {{#link-to 'stage'}}
+                Using stage
+            {{/link-to}}
+        </div>
+    </div>
+    <div class="body">
+        {{outlet}}
+    </div>
+</div>
