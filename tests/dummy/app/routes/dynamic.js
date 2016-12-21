@@ -81,6 +81,8 @@ export default Ember.Route.extend({
     chart.interactivity().hoverMode('single');
     chart.tooltip().positionMode('point');
 
+    chart.palette(anychart.palettes.defaultPalette);
+
     return chart;
   }
 });
