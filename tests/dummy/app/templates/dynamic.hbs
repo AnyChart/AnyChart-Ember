@@ -1,0 +1,11 @@
+<h2>Dynamic chart settings</h2>
+<p>
+    <label>Palette:</label>
+    <select name="palette">
+        {{#each colorOptions}}
+            <option>{{this}}</option>
+        {{/each}}
+    </select>
+</p>
+{{ember-anychart instance=model}}
+{{outlet}}

@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('simple');
   this.route('stage');
+  this.route('dynamic');
 });
 
 export default Router;

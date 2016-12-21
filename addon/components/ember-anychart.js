@@ -4,10 +4,8 @@ export default Ember.Component.extend({
   classNames: ['ember-anychart'],
 
   didInsertElement: function() {
-    Ember.run.scheduleOnce('afterRender', this, '_renderChart');
-  },
+    this._super(...arguments);
 
-  _renderChart: function() {
     let instance = this.get('instance');
     if (typeof instance === 'object') {
       instance.container(this.elementId);
@@ -15,5 +13,5 @@ export default Ember.Component.extend({
         instance.draw();
       }
     }
-  }
+  },
 });
