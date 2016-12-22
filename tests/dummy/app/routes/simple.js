@@ -29,60 +29,61 @@ export default Ember.Route.extend({
       ['2009', 12.0, 22.5, 8.9, 1.5]
     ]);
 
-// map data for the first series, take x from the zero column and value from the first column of data set
+    // map data for the first series, take x from the zero column and value from the first column of data set
     let seriesData_1 = dataSet.mapAs({x: [0], value: [1]});
 
-// map data for the second series, take x from the zero column and value from the second column of data set
+    // map data for the second series, take x from the zero column and value from the second column of data set
     let seriesData_2 = dataSet.mapAs({x: [0], value: [2]});
 
-// map data for the third series, take x from the zero column and value from the third column of data set
+    // map data for the third series, take x from the zero column and value from the third column of data set
     let seriesData_3 = dataSet.mapAs({x: [0], value: [3]});
 
-// create line chart
+    // create line chart
     let chart = anychart.line();
 
-// turn on chart animation
+    // turn on chart animation
     chart.animation(true);
 
-// turn on the crosshair
+    // turn on the crosshair
     chart.crosshair().enabled(true).yLabel().enabled(false);
     chart.crosshair().yStroke(null);
 
-// set tooltip mode to point
+    // set tooltip mode to point
     chart.tooltip().positionMode('point');
 
-// set chart title text settings
+    // set chart title text settings
     chart.title('Trend of Sales of the Most Popular Products of ACME Corp.');
     chart.title().padding([0, 0, 5, 0]);
 
-// set yAxis title
+    // set yAxis title
     chart.yAxis().title('Number of Bottles Sold (thousands)');
     chart.xAxis().labels().padding([5]);
 
-// create first series with mapped data
+    // create first series with mapped data
     let series_1 = chart.line(seriesData_1);
     series_1.name('Brandy');
     series_1.hoverMarkers().enabled(true).type('circle').size(4);
     series_1.tooltip().position('right').anchor('left').offsetX(5).offsetY(5);
 
-// create second series with mapped data
+    // create second series with mapped data
     let series_2 = chart.line(seriesData_2);
     series_2.name('Whiskey');
     series_2.hoverMarkers().enabled(true).type('circle').size(4);
     series_2.tooltip().position('right').anchor('left').offsetX(5).offsetY(5);
 
-// create third series with mapped data
+    // create third series with mapped data
     let series_3 = chart.line(seriesData_3);
     series_3.name('Tequila');
     series_3.hoverMarkers().enabled(true).type('circle').size(4);
     series_3.tooltip().position('right').anchor('left').offsetX(5).offsetY(5);
 
-// turn the legend on
+    // turn the legend on
     chart.legend().enabled(true).fontSize(13).padding([0, 0, 10, 0]);
 
-// set up paddings
+    // set up paddings
     chart.padding([10, 20, 5, 20]);
 
+    // return our chart instance as route's model
     return chart;
   }
 });
