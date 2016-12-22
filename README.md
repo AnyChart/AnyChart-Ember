@@ -40,9 +40,9 @@ ember s
 ```
 And then open browser at http://localhost:4200
 
-####Examples explanation
+###Examples explanation
 
-#####Simple chart example
+####Simple chart example
 'app/routes/simple.js'  
 ```
 export default Ember.Route.extend({
@@ -63,10 +63,9 @@ export default Ember.Route.extend({
 'app/templates/simple.hbs'
 ```
 <!-- Just pass our chart instance to ember-anychart component-->
-<!-- Also we can set custom id and classes for chart containing div -->
 {{ember-anychart instance=model}}
 ```
-#####Using stage example
+####Using stage example
 'app/routes/stage.js'  
 ```
 export default Ember.Route.extend({
@@ -112,8 +111,8 @@ export default Ember.Route.extend({
 <!-- Also we can set custom id and classes for chart containing div -->
 {{ember-anychart instance=model id="custom-styled-container" class="class2"}}
 ```
-#####Dynamic chart settings
-#####Dynamic data
+####Dynamic chart settings
+####Dynamic data
 
 
 
