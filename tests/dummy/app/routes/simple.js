@@ -1,15 +1,7 @@
 import Ember from 'ember';
 
-console.log("routes simple.js loaded");
 export default Ember.Route.extend({
-  beforeModel() {
-    console.log("routes simple.js beforeModel()");
-  },
-  afterModel() {
-    console.log("routes simple.js afterModel()");
-  },
   model() {
-    console.log("routes simple.js model()");
     let dataSet = anychart.data.set([
       ['1986', 3.6, 2.3, 2.8, 11.5],
       ['1987', 7.1, 4.0, 4.1, 14.1],

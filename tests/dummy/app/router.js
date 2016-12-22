@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('simple');
   this.route('stage');
   this.route('dynamic');
+  this.route('data-from-file');
+  this.route('streaming');
 });
 
 export default Router;

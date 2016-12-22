@@ -1,13 +1,6 @@
 import Ember from 'ember';
 
-console.log("routes stage.js loaded");
 export default Ember.Route.extend({
-  beforeModel() {
-    console.log("routes stage.js beforeModel()");
-  },
-  afterModel() {
-    console.log("routes stage.js afterModel()");
-  },
   model() {
     console.log("routes stage.js model()");
 
