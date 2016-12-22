@@ -2,8 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    console.log("routes stage.js model()");
-
     // создаем стедж с графиками и настраиваем как обычно
     let stage = anychart.graphics.create();
 
