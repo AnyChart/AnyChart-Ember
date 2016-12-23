@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('dynamic');
   this.route('data-from-file');
   this.route('streaming');
+  this.route('chart-by-attributes');
 });
 
 export default Router;
