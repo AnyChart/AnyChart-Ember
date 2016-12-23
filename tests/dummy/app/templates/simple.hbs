@@ -1,4 +1,4 @@
 <h2>Simple chart example</h2>
 <!-- Just pass our chart instance to ember-anychart component-->
-{{ember-anychart instance=model}}
+{{ember-anychart instance=model.chart after-draw=model.afterDraw}}
 {{outlet}}

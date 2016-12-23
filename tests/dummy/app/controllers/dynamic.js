@@ -19,7 +19,7 @@ export default Ember.Controller.extend({
   paletteOptions: paletteOptions,
   actions: {
     changePalette(palette) {
-      this.model.palette(anychart.palettes[palette]);
+      this.model.chart.palette(anychart.palettes[palette]);
     }
   }
 });

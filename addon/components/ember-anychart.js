@@ -9,8 +9,18 @@ export default Ember.Component.extend({
     let instance = this.get('instance');
     if (typeof instance === 'object') {
       instance.container(this.elementId);
+      // If instance is a chart
       if (typeof instance.draw === 'function') {
         instance.draw();
+
+        // after draw callback processing
+        let afterDraw = this.get('after-draw');
+        if (typeof afterDraw === 'function') {
+          instance.listenOnce("chartdraw", function() {
+            instance.animation(false);
+            afterDraw(instance);
+          });
+        }
       }
     }
   },

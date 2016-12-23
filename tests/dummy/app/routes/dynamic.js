@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // chart instance
+  chart: undefined,
+
   model() {
     // create data set on our data
     let dataSet = anychart.data.set([
@@ -9,33 +12,33 @@ export default Ember.Route.extend({
       ['Pomade', 8814, 9054, 4376, 9256]
     ]);
 
-// map data for the first series, take x from the zero column and value from the first column of data set
+    // map data for the first series, take x from the zero column and value from the first column of data set
     let seriesData_1 = dataSet.mapAs({x: [0], value: [1]});
 
-// map data for the second series, take x from the zero column and value from the second column of data set
+    // map data for the second series, take x from the zero column and value from the second column of data set
     let seriesData_2 = dataSet.mapAs({x: [0], value: [2]});
 
-// map data for the third series, take x from the zero column and value from the third column of data set
+    // map data for the third series, take x from the zero column and value from the third column of data set
     let seriesData_3 = dataSet.mapAs({x: [0], value: [3]});
 
-// map data for the fourth series, take x from the zero column and value from the fourth column of data set
+    // map data for the fourth series, take x from the zero column and value from the fourth column of data set
     let seriesData_4 = dataSet.mapAs({x: [0], value: [4]});
 
-// create column chart
-    let chart = anychart.column();
+    // create column chart
+    this.chart = anychart.column();
 
-// turn on chart animation
-    chart.animation(true);
+    // turn on chart animation
+    this.chart.animation(true);
 
-// set chart title text settings
-    chart.title('Top 3 Products with Region Sales Data');
+    // set chart title text settings
+    this.chart.title('Top 3 Products with Region Sales Data');
 
-    chart.yAxis().labels().textFormatter("${%Value}");
+    this.chart.yAxis().labels().textFormatter("${%Value}");
 
-// set titles for Y-axis
-    chart.yAxis().title('Revenue');
+    // set titles for Y-axis
+    this.chart.yAxis().title('Revenue');
 
-// helper function to setup label settings for all series
+    // helper function to setup label settings for all series
     let setupSeriesLabels = function (series, name) {
       let seriesLabels = series.labels();
       series.hoverLabels().enabled(false);
@@ -55,34 +58,35 @@ export default Ember.Route.extend({
       series.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5);
     };
 
-// temp letiable to store series instance
+    // temp letiable to store series instance
     let series;
 
-// create first series with mapped data
-    series = chart.column(seriesData_1);
+    // create first series with mapped data
+    series = this.chart.column(seriesData_1);
     setupSeriesLabels(series, 'Florida');
 
-// create second series with mapped data
-    series = chart.column(seriesData_2);
+    // create second series with mapped data
+    series = this.chart.column(seriesData_2);
     setupSeriesLabels(series, 'Texas');
 
-// create third series with mapped data
-    series = chart.column(seriesData_3);
+    // create third series with mapped data
+    series = this.chart.column(seriesData_3);
     setupSeriesLabels(series, 'Arizona');
 
-// create fourth series with mapped data
-    series = chart.column(seriesData_4);
+    // create fourth series with mapped data
+    series = this.chart.column(seriesData_4);
     setupSeriesLabels(series, 'Nevada');
 
-// turn on legend and tune it
-    chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
+    // turn on legend and tune it
+    this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
 
-// interactivity settings and tooltip position
-    chart.interactivity().hoverMode('single');
-    chart.tooltip().positionMode('point');
+    // interactivity settings and tooltip position
+    this.chart.interactivity().hoverMode('single');
+    this.chart.tooltip().positionMode('point');
 
-    chart.palette(anychart.palettes.defaultPalette);
+    // set up chart palette as 'defaultPalette'
+    this.chart.palette(anychart.palettes.defaultPalette);
 
-    return chart;
+    return {chart: this.chart};
   }
 });

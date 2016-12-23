@@ -13,17 +13,17 @@ export default Ember.Route.extend({
       // turn the legend on
       this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
 
-      // Here we create first data
-      this.data = [];
+      // Here we create initial data for dataSet
+      let data = [];
       for (let i = 0; i < 50; i++) {
-        this.data.push([
+        data.push([
           this._getRandomInt(180, 350),
           this._getRandomInt(20, 150)
         ]);
       }
 
       // create data set on our data
-      this.dataSet = anychart.data.set(this.data);
+      this.dataSet = anychart.data.set(data);
 
       // map data for the first series, takes value from the first column of data set
       let seriesData_1 = this.dataSet.mapAs({value: [0]});

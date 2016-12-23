@@ -12,6 +12,10 @@ html, body, .ember-anychart {
 .menu .links a {
     display: inline-block;
     padding: 5px 10px;
+    outline: none;
+}
+.menu .active {
+    font-weight: bold;
 }
 .ember-anychart {
     width: 600px;
