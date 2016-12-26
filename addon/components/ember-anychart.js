@@ -37,7 +37,7 @@ export default Ember.Component.extend({
         instance.draw();
 
         // after draw callback processing
-        let afterDraw = this.get("after-draw");
+        let afterDraw = this.get("afterDraw");
         if (typeof afterDraw === "function") {
           instance.listenOnce("chartdraw", function() {
             instance.animation(false);

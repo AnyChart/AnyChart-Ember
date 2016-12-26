@@ -27,7 +27,7 @@ export default Ember.Route.extend({
 
       // map data for the first series, takes value from the first column of data set
       let seriesData_1 = this.dataSet.mapAs({value: [0]});
-      
+
       // create first series with mapped data
       let series_1 = this.chart.stepLine(seriesData_1);
       series_1.color('#ff0e09').name('Red');
@@ -56,19 +56,19 @@ export default Ember.Route.extend({
     ];
 
     // Adding new data to dataSet, and removing same amount of rows of older data
-    for(let i in newData){
+    for (let i in newData) {
       // Just removing the most old row of data
       this.dataSet.remove(0);
       // Add new row
       this.dataSet.append(newData[i]);
     }
 
-    return this.chart;
+    return {chart: this.chart};
   },
   afterModel() {
     // Set timer to reload model
     let self = this;
-    Ember.run.later((function() {
+    Ember.run.later((function () {
       self.refresh();
     }), 500);
   },
