@@ -9,7 +9,7 @@ export default Ember.Route.extend({
   chart2: undefined,
 
   model() {
-    if (this.stage == undefined) {
+    if (this.stage === undefined) {
       // Create stage
       this.stage = anychart.graphics.create();
 

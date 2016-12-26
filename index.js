@@ -3,13 +3,15 @@
 
 module.exports = {
   name: 'ember-anychart',
-  included: function(app) {
+  included: function (app) {
     this._super.included(app);
-
-    app.import('vendor/anychart-fonts.css');
-    app.import('vendor/anychart-ui.min.css');
-    app.import('vendor/anychart.min.js');
-    //app.import(app.bowerDirectory + '/anychart/dist/anychart.min.js');
-    // https://cdn.anychart.com/js/latest/anychart.min.js
+  },
+  options: {
+    nodeAssets: {
+      'anychart': {
+        srcDir: 'dist',
+        import: ['anychart-bundle.min.js', 'anychart-ui.min.css']
+      }
+    }
   }
 };

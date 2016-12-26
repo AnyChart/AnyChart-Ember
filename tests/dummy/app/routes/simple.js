@@ -11,7 +11,7 @@ export default Ember.Route.extend({
   },
 
   model() {
-    if (this.chart == undefined) {
+    if (this.chart === undefined) {
       // We have some data
       let data = [
         ['1986', 3.6, 2.3, 2.8, 11.5],
