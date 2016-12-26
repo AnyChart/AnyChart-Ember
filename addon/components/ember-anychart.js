@@ -10,16 +10,19 @@ export default Ember.Component.extend({
     this._super(...arguments);
 
     let attributes = arguments[0]["newAttrs"];
-    // Processing instance
+
     if(!("instance" in attributes)) {
-      let acType = this.get("type") || "line"; 
+      let acType = this.get("type") || "line";
       this.set("instance", anychart[acType]());
     }
 
+    let instance = this.get("instance");
     let attr;
     for (attr in attributes) {
-      let value = attributes[attr]['value'];
-      console.log(attr, value);
+      let value = attributes[attr]["value"];
+      if(typeof instance[attr] === "function") {
+        instance[attr](value);
+      }
     }
   },
 

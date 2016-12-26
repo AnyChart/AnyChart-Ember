@@ -19,7 +19,7 @@ An AnyChart component for Ember CLI
 Use the following custom element to a Handlebars template file:
 
 ```handlebars
-{{ember-anychart instance=chart|stage}}
+{{ember-anychart instance=[chart|stage]}}
 ```
 
 ###Properties

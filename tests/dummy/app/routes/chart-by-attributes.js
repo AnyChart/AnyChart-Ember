@@ -3,7 +3,9 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(){
     return {
-      data: [1, 5, 10, -3, 50, 4, 5, 15, -40]
-    }
+      data: [["one", 3], ["two", 6], ["three", 54], ["four", 20]],
+      type: 'pie',
+      title: "Custom title of a chart"
+    };
   }
 });
