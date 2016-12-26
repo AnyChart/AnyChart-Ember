@@ -4,12 +4,12 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function (defaults) {
   var app = new EmberAddon(defaults, {
-    nodeAssets: {
-      'anychart': {
-        srcDir: 'dist',
-        import: ['anychart-bundle.min.js', 'anychart-ui.min.css']
-      }
-    }
+    // nodeAssets: {
+    //   'anychart': {
+    //     srcDir: 'dist',
+    //     import: ['anychart-bundle.min.js', 'anychart-ui.min.css']
+    //   }
+    // }
   });
 
   /*
@@ -18,5 +18,8 @@ module.exports = function (defaults) {
    This build file does *not* influence how the addon or the app using it
    behave. You most likely want to be modifying `./index.js` or app's build file
    */
+    app.import('vendor/anychart/dist/anychart-bundle.min.js');
+    app.import('vendor/anychart/dist/anychart-ui.min.css');
+
   return app.toTree();
 };

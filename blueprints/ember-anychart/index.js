@@ -1,7 +1,7 @@
 module.exports = {
   normalizeEntityName: function() {},
 
-  afterInstall: function() {
-    return this.addPackageToProject('anychart');
-  }
+  // afterInstall: function() {
+  //   return this.addPackageToProject('anychart');
+  // }
 };
