@@ -52,7 +52,7 @@ ember s
 ```
 And then open browser at http://localhost:4200
 
-###Examples explanation
+###Examples files
 
 ####Simple chart example
 'app/routes/simple.js'  
