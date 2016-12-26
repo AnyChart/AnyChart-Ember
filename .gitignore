@@ -16,5 +16,5 @@
 npm-debug.log*
 testem.log
 
-.idea/
+.idea
 todo.txt
