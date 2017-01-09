@@ -18,7 +18,7 @@
     "visualizations",
     "wrapper"
   ],
-  "license": "MIT",
+  "license": "Apache 2.0",
   "author": "AnyChart",
   "directories": {
     "doc": "doc",
