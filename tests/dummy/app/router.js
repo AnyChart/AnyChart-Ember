@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('data-from-file');
   this.route('streaming');
   this.route('chart-by-attributes');
+  this.route('gantt');
 });
 
 export default Router;

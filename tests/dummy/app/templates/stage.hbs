@@ -1,4 +1,4 @@
-<h2>Using stage example</h2>
+<h2>Simple dashboard</h2>
 <style>
     #custom-styled-container {
         border-color: green;
@@ -6,6 +6,12 @@
         height: 600px;
     }
 </style>
+<p>Using <strong>&#123;&#123;ember-anychart&#125;&#125;</strong> element you can create not only AnyChart diagram but also dashboard.
+  All you need is to pass stage instance to <i>instance</i> attribute.</p>
+<p><code>&#123;&#123;ember-anychart instance=model.stage&#125;&#125;</code></p>
+<p>Stage instance is created in route file <i>ember-anychart\tests\dummy\app\routes\stage.js</i>.</p>
+<p>Besides chart setting attributes you can use standard <i>id</i> and <i>class</i> attributes to set custom css styles for chart or dashboard container.</p>
+<p><code>&#123;&#123;ember-anychart instance=model.stage id="custom-styled-container" class="class2"&#125;&#125;</code></p>
 <!-- Just pass our stage instance to ember-anychart component-->
 <!-- Also we can set custom id and classes for chart containing div -->
 {{ember-anychart instance=model.stage id="custom-styled-container" class="class2"}}

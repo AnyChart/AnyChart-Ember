@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   chart: undefined,
   dataSet: undefined,
-  data: undefined,
 
   beforeModel(){
     if (!this.chart) {

@@ -30,3 +30,13 @@ html, body, .ember-anychart {
     width: 100%;
     border-color: red;
 }
+
+p code {
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}

@@ -4,12 +4,6 @@ export default Ember.Route.extend({
   // chart instance
   chart: undefined,
 
-  // after draw callback
-  afterChartDraw(chart){
-    let oldTitle = chart.title().text();
-    chart.title(oldTitle + "!!!");
-  },
-
   model() {
     if (this.chart === undefined) {
       // We have some data
@@ -100,8 +94,7 @@ export default Ember.Route.extend({
 
     // return our chart instance as route's model
     return {
-      chart: this.chart,
-      afterDraw: this.afterChartDraw
+      chart: this.chart
     };
   }
 });

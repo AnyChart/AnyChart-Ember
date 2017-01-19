@@ -1,4 +1,7 @@
-<h2>Dynamic chart settings</h2>
+<h2>Chart with dynamic settings</h2>
+<p>If we change some setting of AnyChart diagram instance, it will be applied dynamically.
+  In this example we change palette option using select input and processing it's <i>onchange</i> event in proper controller
+  <i>ember-anychart\tests\dummy\app\controllers\dynamic.js</i></p>
 <p>
     <label>Palette:</label>
     <select onchange={{action "changePalette" value="target.value"}}>
@@ -7,6 +10,5 @@
         {{/each}}
     </select>
 </p>
-
 {{ember-anychart instance=model.chart}}
 {{outlet}}

@@ -1,3 +1,8 @@
-<h2>Create chart by component attributes</h2>
-{{ember-anychart data=model.data type=model.type title=model.title palette="red"}}
+<h2>Chart with custom settings</h2>
+<p>Here we create our chart using only attributes:</p>
+<p><code>&#123;&#123;ember-anychart data=model.data type=model.type title=model.title afterDraw=model.afterDraw&#125;&#125;</code></p>
+<p>All attribute values are specified in route file <i>ember-anychart\tests\dummy\app\routes\chart-by-attributes.js</i></p>
+<p>Notice also using <strong>afterDraw</strong> attribute. With this attribute we can set up callback function, that will be called
+  after chart drawing is done. This function takes chart instance as it's first argument.</p>
+{{ember-anychart data=model.data type=model.type title=model.title afterDraw=model.afterDraw}}
 {{outlet}}
