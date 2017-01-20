@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('chart-by-attributes');
   this.route('gantt');
   this.route('stock');
+  this.route('map');
 });
 
 export default Router;
