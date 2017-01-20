@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // Chart instance
+  chart: undefined,
 
   model(){
     return {
@@ -10,8 +12,9 @@ export default Ember.Route.extend({
 
       //After draw callback
       afterDraw: function(chart){
-        let oldTitle = chart.title().text();
-        chart.title(oldTitle + "!!!");
+        this.chart = chart;
+        let oldTitle = this.chart.title().text();
+        this.chart.title(oldTitle + "!!!");
       }
     };
   }
