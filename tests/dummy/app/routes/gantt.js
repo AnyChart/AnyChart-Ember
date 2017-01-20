@@ -67,7 +67,7 @@ export default Ember.Route.extend({
       afterDraw: function(chart) {
         chart.zoomTo(951350400000, 954201600000);
       }
-    }
+    };
   },
 
   _getData() {

@@ -5,6 +5,7 @@ export default Ember.Route.extend({
   chart: undefined,
 
   model(){
+    let self = this;
     return {
       data: [["one", 3], ["two", 6], ["three", 54], ["four", 20]],
       type: 'pie',
@@ -12,9 +13,9 @@ export default Ember.Route.extend({
 
       //After draw callback
       afterDraw: function(chart){
-        this.chart = chart;
-        let oldTitle = this.chart.title().text();
-        this.chart.title(oldTitle + "!!!");
+        self.chart = chart;
+        let oldTitle = self.chart.title().text();
+        self.chart.title(oldTitle + "!!!");
       }
     };
   }

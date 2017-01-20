@@ -22,7 +22,6 @@ html, body, .ember-anychart {
     height: 500px;
     border: 2px solid deepskyblue;
 }
-
 .class2 {
     border-style: dashed;
 }
@@ -30,7 +29,10 @@ html, body, .ember-anychart {
     width: 100%;
     border-color: red;
 }
-
+.wide-container {
+  width: 100%;
+  height: 600px;
+}
 p code {
   padding: 9.5px;
   margin: 0 0 10px;
