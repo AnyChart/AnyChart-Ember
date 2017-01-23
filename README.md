@@ -9,22 +9,25 @@ Provides an easy way to use [AnyChart JavaScript Charts](http://anychart.com) wi
 
 ## Download and install
 
+###Install dependencies
 Begin by downloading [NodeJS](https://nodejs.org/en/) if you don’t already have it installed.
 
-To use **ember-anychart** plugin you should have installed [Bower](https://bower.io/) and [Ember CLI](https://ember-cli.com/).
+To use **ember-anychart** plugin you should also have installed [Bower](https://bower.io/) and [Ember CLI](https://ember-cli.com/).
 
-`npm install -g bower`  
-`npm install -g ember-cli`
+* `npm install -g bower`  
+* `npm install -g ember-cli`
 
-You can install **ember-anychart** plugin on your computer using **npm** or **yarn** package managers:  
-`npm install ember-anychart`  
-or  
-`yarn install ember-anychart`  
+###Install plugin on computer
+You can install **ember-anychart** plugin on your computer globally using **npm** or **yarn** package managers:  
+* `npm install -g ember-anychart`  
+* or `yarn global add ember-anychart`  
 
-To install **ember-anychart** plugin to your ember project navigate to project directory and type this: 
+###Install plugin into project
+To install **ember-anychart** plugin into your ember project navigate to project directory and first download package: 
 
-`npm install --save ember-anychart`   
-`ember g ember-anychart`
+* `npm install --save ember-anychart` 
+* or `yarn add ember-anychart`
+
 
 ## Usage
 
