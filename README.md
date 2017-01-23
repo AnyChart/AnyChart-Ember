@@ -25,7 +25,8 @@ You can install **ember-anychart** plugin on your computer globally using **npm*
 ###Install plugin into project
 To install **ember-anychart** plugin into your ember project navigate to project directory and first download package: 
 
-* `npm install --save ember-anychart` 
+* `npm install --save ember-anychart`
+* or `ember install --save ember-anychart`
 * or `yarn add ember-anychart`
 
 
