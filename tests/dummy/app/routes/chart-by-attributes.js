@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     return {
       data: [["Pen", 3], ["Pineapple", 9], ["Apple", 5], ["Pen", 3]],
       type: 'pie',
-      title: "Custom title of a chart",
+      title: "Chart title text",
 
       //After draw callback
       afterDraw: function(chart){
