@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   model(){
     let self = this;
     return {
-      data: [["one", 3], ["two", 6], ["three", 54], ["four", 20]],
+      data: [["Pen", 3], ["Pineapple", 9], ["Apple", 5], ["Pen", 3]],
       type: 'pie',
       title: "Custom title of a chart",
 
