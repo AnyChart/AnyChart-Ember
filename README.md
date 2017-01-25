@@ -55,7 +55,7 @@ Use the following custom element to a Handlebars template file:
 | **instance** | Object | Anychart's chart or stage instance. If you use this parameter, then *type* attribute is ignored. | **Required** (if not defined *type*) |
 | **type** | String | Type of chart. Use this to create simple chart. This param is ignored when *instance* is defined. | **Required** (if not defined *instance*) |
 | **afterDraw** | Function | After chart draw callback function. This param is ignored when 'instance' param is defined and it is a stage instance. | optional |
-| All anychart's chart (or stage) instance setting | | You can use any other anychart's chart or stage instance setting as attribute, for example *title*, *label*, *legend* and so on. | optional |
+| Any anychart's chart or stage instance setting | | You can use any anychart's chart or stage instance setting as attribute, for example *data*, *title*, *label*, *legend* and so on. | optional |
 
 
 ##Examples
