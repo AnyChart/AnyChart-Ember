@@ -97,7 +97,7 @@ Then open browser at *http://localhost:4200*
 * [Download AnyChart](http://www.anychart.com/download/)
 * [AnyChart Licensing](http://www.anychart.com/buy/)
 * [AnyChart Support](http://www.anychart.com/support/)
-* [Report Issues](http://github.com/AnyChart/anychart/issues)
+* [Report Issues](https://github.com/AnyChart/AnyChart-Ember/issues)
 * [AnyChart Playground](http://playground.anychart.com)
 * [AnyChart Documentation](http://docs.anychart.com)
 * [AnyChart API Reference](http://api.anychart.com)
