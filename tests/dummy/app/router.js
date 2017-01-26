@@ -7,15 +7,14 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('simple');
-  this.route('stage');
-  this.route('dynamic');
-  this.route('data-from-file');
-  this.route('streaming');
+  this.route('simple-chart');
   this.route('chart-with-custom-settings');
-  this.route('gantt');
-  this.route('stock');
-  this.route('map');
+  this.route('simple-dashboard');
+  this.route('chart-with-dynamic-settings');
+  this.route('data-streaming');
+  this.route('simple-stock-chart');
+  this.route('geographical-colored-map');
+  this.route('simple-gantt-chart');
 });
 
 export default Router;
