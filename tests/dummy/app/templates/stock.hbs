@@ -1,7 +1,7 @@
 <h2>Simple stock chart</h2>
-<p>In this example we create Stock chart. One of the main characteristics of this type of charts is ability to work with large amount of data.</p>
-<p>In <b>stock</b> route (<i>ember-anychart\tests\dummy\app\routes\stock.js</i>) we load big data from json file <i>ember-anychart\tests\dummy\public\stock-data.json</i>
-and pass this data to private function that creates chart.</p>
+<p>In this example we create a Stock chart. One of the main characteristics of this type of charts is the ability to work with big data sets.</p>
+<p>In <b>stock</b> route (<i>ember-anychart\tests\dummy\app\routes\stock.js</i>) we load a big data set from the JSON file <i>ember-anychart\tests\dummy\public\stock-data.json</i>
+and pass this data to a private function that creates a chart.</p>
 <p>Also we use after draw callback function to set up range picker and range selector.</p>
 <p><code>&#123;&#123;ember-anychart instance=model.chart afterDraw=model.afterDraw class="wide-container"&#125;&#125;</code></p>
 {{ember-anychart instance=model.chart afterDraw=model.afterDraw class="wide-container"}}
