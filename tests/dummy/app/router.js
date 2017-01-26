@@ -12,7 +12,7 @@ Router.map(function() {
   this.route('dynamic');
   this.route('data-from-file');
   this.route('streaming');
-  this.route('chart-by-attributes');
+  this.route('chart-with-custom-settings');
   this.route('gantt');
   this.route('stock');
   this.route('map');

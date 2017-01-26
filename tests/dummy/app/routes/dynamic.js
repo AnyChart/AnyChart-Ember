@@ -38,24 +38,25 @@ export default Ember.Route.extend({
     // set titles for Y-axis
     this.chart.yAxis().title('Revenue');
 
+    // set up tooltip position
+    this.chart.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5).positionMode('point');
+    this.chart.tooltip().textFormatter(function() {
+      return this.seriesName + ': $' + parseInt(this.value).toLocaleString();
+    });
+
+    this.chart.tooltip().textFormatter("{%SeriesName}: ${%Value}{groupsSeparator:\\,}");
+
     // helper function to setup label settings for all series
-    let setupSeriesLabels = function (series, name) {
+    let setupSeriesLabels = function(series, name) {
       let seriesLabels = series.labels();
       series.hoverLabels().enabled(false);
       seriesLabels.enabled(true);
       seriesLabels.position('top');
-      seriesLabels.textFormatter(function () {
+      seriesLabels.textFormatter(function() {
         return '$' + this.value.toLocaleString();
       });
       series.name(name);
       seriesLabels.anchor('bottom');
-      series.tooltip().titleFormatter(function () {
-        return this.x;
-      });
-      series.tooltip().textFormatter(function () {
-        return this.seriesName + ': $' + parseInt(this.value).toLocaleString();
-      });
-      series.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5);
     };
 
     // temp letiable to store series instance
@@ -80,9 +81,8 @@ export default Ember.Route.extend({
     // turn on legend and tune it
     this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
 
-    // interactivity settings and tooltip position
+    // interactivity settings
     this.chart.interactivity().hoverMode('single');
-    this.chart.tooltip().positionMode('point');
 
     // set up chart palette as 'defaultPalette'
     this.chart.palette(anychart.palettes.defaultPalette);

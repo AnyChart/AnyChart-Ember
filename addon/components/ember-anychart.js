@@ -31,6 +31,7 @@ export default Ember.Component.extend({
 
         Ember.run.scheduleOnce('afterRender', this, '_renderChart');
     },
+
     _renderChart(){
         let instance = this.get("instance");
         if (typeof instance === "object") {
@@ -50,5 +51,4 @@ export default Ember.Component.extend({
             }
         }
     }
-
 });

@@ -23,7 +23,7 @@ You can install **ember-anychart** plugin on your computer globally using **npm*
 * or `yarn global add ember-anychart`  
 
 ###Install plugin into project
-To install **ember-anychart** plugin into your ember project navigate to project directory and install package: 
+To install **ember-anychart** plugin into your Ember project navigate to project directory and install package: 
 
 * `npm install --save ember-anychart`
 * or `ember install --save ember-anychart`
@@ -54,7 +54,7 @@ Use the following custom element to a Handlebars template file:
 | :------------- |:-------------:| :----| :---- |
 | **instance** | Object | Anychart's chart or stage instance. If you use this parameter, then *type* attribute is ignored. | **Required** (if not defined *type*) |
 | **type** | String | Type of chart. Use this to create simple chart. This param is ignored when *instance* is defined. | **Required** (if not defined *instance*) |
-| **afterDraw** | Function | After chart draw callback function. This param is ignored when 'instance' param is defined and it is a stage instance. | optional |
+| **afterDraw** | Function | After chart draw callback function. This param is ignored when *instance* param is defined and it's value is a stage instance. | optional |
 | Any anychart's chart or stage instance setting | | You can use any anychart's chart or stage instance setting as attribute, for example *data*, *title*, *label*, *legend* and so on. | optional |
 
 
