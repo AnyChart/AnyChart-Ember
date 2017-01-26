@@ -5,20 +5,17 @@ export default Ember.Route.extend({
   chart: undefined,
 
   model() {
-    // create data tree on our data
-    let treeData = anychart.data.tree(this._getData(), anychart.enums.TreeFillingMethod.AS_TABLE);
-
     // create project gantt chart
     this.chart = anychart.ganttProject();
 
-    // set container id for the chart
-    this.chart.container('container');
+    // create data tree on our data
+    let treeData = anychart.data.tree(this._getData(), anychart.enums.TreeFillingMethod.AS_TABLE);
 
     // set data for the chart
     this.chart.data(treeData);
 
     // set start splitter position settings
-    this.chart.splitterPosition(370);
+    this.chart.splitterPosition(395);
 
     // get chart data grid link to set column settings
     let dataGrid = this.chart.dataGrid();
@@ -37,30 +34,16 @@ export default Ember.Route.extend({
     // set third column settings
     let thirdColumn = dataGrid.column(2);
     thirdColumn.title('Start Time');
-    thirdColumn.width(70);
+    thirdColumn.width(90);
     thirdColumn.cellTextSettings().hAlign('right');
-    thirdColumn.textFormatter(function(item) {
-      let date = new Date(item.get('actualStart'));
-      let month = date.getUTCMonth() + 1;
-      let strMonth = (month > 9) ? month : '0' + month;
-      let utcDate = date.getUTCDate();
-      let strDate = (utcDate > 9) ? utcDate : '0' + utcDate;
-      return date.getUTCFullYear() + '.' + strMonth + '.' + strDate;
-    });
+    thirdColumn.textFormatter(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd")});
 
     // set fourth column settings
     let fourthColumn = dataGrid.column(3);
     fourthColumn.title('End Time');
-    fourthColumn.width(80);
+    fourthColumn.width(90);
     fourthColumn.cellTextSettings().hAlign('right');
-    fourthColumn.textFormatter(function(item) {
-      let date = new Date(item.get('actualEnd'));
-      let month = date.getUTCMonth() + 1;
-      let strMonth = (month > 9) ? month : '0' + month;
-      let utcDate = date.getUTCDate();
-      let strDate = (utcDate > 9) ? utcDate : '0' + utcDate;
-      return date.getUTCFullYear() + '.' + strMonth + '.' + strDate;
-    });
+    fourthColumn.textFormatter(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd")});
 
     return {
       chart: this.chart,

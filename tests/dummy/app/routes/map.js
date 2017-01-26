@@ -29,12 +29,6 @@ export default Ember.Route.extend({
       'per person each state consumed in 2013.</span>'
     ).useHtml(true);
 
-    let credits = this.chart.credits();
-    credits.enabled(true);
-    credits.url('//businessinsider.com/wine-consumption-map-united-states-2014-3');
-    credits.text('Data source: http://www.businessinsider.com/wine-consumption-map-united-states-2014-3');
-    credits.logoSrc('//static.anychart.com/images/maps_samples/USA_Map_with_Linear_Scale/favicon.ico');
-
     //set map Geo data
     this.chart.geoData(data);
 
@@ -108,9 +102,7 @@ export default Ember.Route.extend({
     series.hoverStroke(anychart.color.darken('#f48fb1'));
     series.selectFill('#c2185b');
     series.selectStroke(anychart.color.darken('#c2185b'));
-    series.labels().fontSize(10).fontColor('#212121').textFormatter(function () {
-      return this.value;
-    });
+
     series.tooltip().textWrap('byLetter').useHtml(true);
     series.tooltip().textFormatter(function () {
       return '<span style="font-size: 13px">' + this.value + ' litres per capita</span>';

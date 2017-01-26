@@ -10,6 +10,18 @@ export default Ember.Route.extend({
 
   model() {
     if (this.stage === undefined) {
+      let data = [
+        ['Rouge', '80540'],
+        ['Foundation', '94190'],
+        ['Mascara', '102610'],
+        ['Lip gloss', '110430'],
+        ['Pomade', '128000'],
+        ['Nail polish', '143760'],
+        ['Eyebrow pencil', '170670'],
+        ['Eyeliner', '213210'],
+        ['Eyeshadows', '249980']
+      ];
+
       // Create stage
       this.stage = anychart.graphics.create();
 
@@ -22,73 +34,51 @@ export default Ember.Route.extend({
       // set chart1 title text settings
       this.chart1.title('Top 10 Cosmetic Products by Revenue');
 
-      // create area series with passed data
-      let series = this.chart1.column([
-        ['Rouge', '80540'],
-        ['Foundation', '94190'],
-        ['Mascara', '102610'],
-        ['Lip gloss', '110430'],
-        ['Pomade', '128000'],
-        ['Nail polish', '143760'],
-        ['Eyebrow pencil', '170670'],
-        ['Eyeliner', '213210'],
-        ['Eyeshadows', '249980']
-      ]);
-
-      // set series tooltip settings
-      series.tooltip().titleFormatter(function () {
-        return this.x;
-      });
-
-      series.tooltip().textFormatter(function () {
-        return '$' + parseInt(this.value).toLocaleString();
-      });
-      series.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5);
+      // tooltips position and interactivity settings
+      this.chart1.tooltip().positionMode('point').position('top').anchor('bottom').offsetX(0).offsetY(5);
+      this.chart1.interactivity().hoverMode('byX');
 
       // set scale minimum
       this.chart1.yScale().minimum(0);
-
-      // set yAxis labels formatter
-      this.chart1.yAxis().labels().textFormatter("${%Value}");
-
-      // tooltips position and interactivity settings
-      this.chart1.tooltip().positionMode('point');
-      this.chart1.interactivity().hoverMode('byX');
 
       // axes titles
       this.chart1.xAxis().title('Product');
       this.chart1.yAxis().title('Revenue');
 
-      // set stage as container the first chart
-      this.chart1.container(this.stage);
+      // set yAxis labels formatter
+      this.chart1.yAxis().labels().textFormatter("${%Value}");
 
-      // initiate chart1 drawing
+      // create area series with passed data
+      let series = this.chart1.column(data);
+
+      // set series tooltip settings
+      series.tooltip().textFormatter("${%Value}{groupsSeparator:\\,}");
+
+      // set up chart's size
       this.chart1.width(800);
       this.chart1.height(300);
-      this.chart1.draw();
 
       // create second chart
-      this.chart2 = anychart.pie([
-        ['Department Stores', 6371664],
-        ['Discount Stores', 7216301],
-        ['Men\'s/Women\'s Stores', 1486621],
-        ['Juvenile Specialty Stores', 786622],
-        ['All other outlets', 900000]
-      ]);
+      this.chart2 = anychart.pie(data);
+
+      // turn on chart2 animation
+      this.chart2.animation(true);
 
       //set chart radius
       this.chart2.radius('43%');
 
-      // create empty area in pie chart
-      this.chart2.innerRadius('30%');
+      // set up chart2 legend
+      this.chart2.legend().enabled(true).position("left").align("top").itemsLayout("vertical");
 
-      // set stage as container the second chart
-      this.chart2.container(this.stage);
-
-      // initiate chart2 drawing
       this.chart2.width(800);
       this.chart2.height(300);
       this.chart2.top(300);
+
+      // set stage as container for the both of charts and initiate drawing
+      this.chart1.container(this.stage);
+      this.chart2.container(this.stage);
+
+      this.chart1.draw();
       this.chart2.draw();
     }
 

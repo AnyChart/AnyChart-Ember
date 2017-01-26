@@ -23,10 +23,12 @@ export default Ember.Route.extend({
 
     // map loaded data
     let firstMapping = dataTable.mapAs({'low': 2, 'high': 3, 'value': 4});
-    let secondMapping = dataTable.mapAs({'low': 11, 'high': 12, value: 13});
+    let secondMapping = dataTable.mapAs({'low': 11, 'high': 12, 'value': 13});
 
     // create stock chart
     this.chart = anychart.stock();
+
+    this.chart.tooltip().useHtml(true);
 
     // create first plot on the chart with column series
     let firstPlot = this.chart.plot(0);
@@ -65,7 +67,6 @@ export default Ember.Route.extend({
     // set chart selected date/time range
     this.chart.selectRange('2007-01-03', '2007-05-20');
 
-    this.chart.tooltip().useHtml(true);
     return this.chart;
   },
 

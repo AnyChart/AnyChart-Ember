@@ -38,51 +38,40 @@ export default Ember.Route.extend({
     // set titles for Y-axis
     this.chart.yAxis().title('Revenue');
 
-    // set up tooltip position
+    // set up tooltip position and text formatter
     this.chart.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5).positionMode('point');
-    this.chart.tooltip().textFormatter(function() {
-      return this.seriesName + ': $' + parseInt(this.value).toLocaleString();
-    });
-
     this.chart.tooltip().textFormatter("{%SeriesName}: ${%Value}{groupsSeparator:\\,}");
-
-    // helper function to setup label settings for all series
-    let setupSeriesLabels = function(series, name) {
-      let seriesLabels = series.labels();
-      series.hoverLabels().enabled(false);
-      seriesLabels.enabled(true);
-      seriesLabels.position('top');
-      seriesLabels.textFormatter(function() {
-        return '$' + this.value.toLocaleString();
-      });
-      series.name(name);
-      seriesLabels.anchor('bottom');
-    };
-
-    // temp letiable to store series instance
-    let series;
-
-    // create first series with mapped data
-    series = this.chart.column(seriesData_1);
-    setupSeriesLabels(series, 'Florida');
-
-    // create second series with mapped data
-    series = this.chart.column(seriesData_2);
-    setupSeriesLabels(series, 'Texas');
-
-    // create third series with mapped data
-    series = this.chart.column(seriesData_3);
-    setupSeriesLabels(series, 'Arizona');
-
-    // create fourth series with mapped data
-    series = this.chart.column(seriesData_4);
-    setupSeriesLabels(series, 'Nevada');
 
     // turn on legend and tune it
     this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
 
     // interactivity settings
     this.chart.interactivity().hoverMode('single');
+
+    // helper function to setup label settings for all series
+    let setupSeries = function(series, name) {
+      series.name(name);
+      series.hoverLabels().enabled(false);
+
+      let seriesLabels = series.labels();
+      seriesLabels.enabled(true).position('top').anchor('bottom').textFormatter("${%Value}{groupsSeparator:\\,}");
+    };
+
+    // create first series with mapped data
+    let series_1 = this.chart.column(seriesData_1);
+    setupSeries(series_1, 'Florida');
+
+    // create second series with mapped data
+    let series_2 = this.chart.column(seriesData_2);
+    setupSeries(series_2, 'Texas');
+
+    // create third series with mapped data
+    let series_3 = this.chart.column(seriesData_3);
+    setupSeries(series_3, 'Arizona');
+
+    // create fourth series with mapped data
+    let series_4 = this.chart.column(seriesData_4);
+    setupSeries(series_4, 'Nevada');
 
     // set up chart palette as 'defaultPalette'
     this.chart.palette(anychart.palettes.defaultPalette);
