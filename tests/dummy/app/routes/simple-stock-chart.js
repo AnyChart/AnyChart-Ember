@@ -24,10 +24,6 @@ export default Ember.Route.extend({
     // map loaded data for the ohlc series
     let mapping = dataTable.mapAs({'open': 1, 'high': 2, 'low': 3, 'close': 4});
 
-    // map loaded data for the scroller
-    let scrollerMapping = dataTable.mapAs();
-    scrollerMapping.addField('value', 5);
-
     // create stock chart
     this.chart = anychart.stock();
 
