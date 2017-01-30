@@ -1,6 +1,6 @@
 {
   "name": "ember-anychart",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "description": "Ember component for the AnyChart JavaScript charting library.",
   "keywords": [
     "addon",
