@@ -21,48 +21,31 @@ export default Ember.Route.extend({
     let dataTable = anychart.data.table();
     dataTable.addData(data);
 
-    // map loaded data
-    let firstMapping = dataTable.mapAs({'low': 2, 'high': 3, 'value': 4});
-    let secondMapping = dataTable.mapAs({'low': 11, 'high': 12, 'value': 13});
+    // map loaded data for the ohlc series
+    let mapping = dataTable.mapAs({'open': 1, 'high': 2, 'low': 3, 'close': 4});
+
+    // map loaded data for the scroller
+    let scrollerMapping = dataTable.mapAs();
+    scrollerMapping.addField('value', 5);
 
     // create stock chart
     this.chart = anychart.stock();
 
-    this.chart.tooltip().useHtml(true);
+    // create first plot on the chart
+    let plot = this.chart.plot(0);
+    plot.grid().enabled(true);
+    plot.grid(1).enabled(true).layout('vertical');
+    plot.minorGrid().enabled(true);
+    plot.minorGrid(1).enabled(true).layout('vertical');
 
-    // create first plot on the chart with column series
-    let firstPlot = this.chart.plot(0);
-    firstPlot.rangeStepArea(firstMapping).name('Temperature').tooltip().useHtml(true).textFormatter(function() {
-      return this.seriesName +
-        '<br/><span style="color: #ccc">Max</span>: ' + this.high + '&deg;' +
-        '<br/><span style="color: #ccc">Avg.</span>: ' + this.getDataValue('value') + '&deg;' +
-        '<br/><span style="color: #ccc">Min</span>: ' + this.low + '&deg;';
-    });
-    firstPlot.marker(firstMapping).name('Average').type('diamond').tooltip(null);
-    firstPlot.xAxis().background().enabled(true);
-    firstPlot.grid().enabled(true);
-    firstPlot.grid(1).enabled(true).layout('vertical');
-    firstPlot.minorGrid().enabled(true);
-    firstPlot.minorGrid(1).enabled(true).layout('vertical');
+    // create EMA indicators with period 50
+    plot.ema(dataTable.mapAs({'value': 4})).series().stroke('1.5 #455a64');
 
-    // create second plot on the chart with column series
-    let secondPlot = this.chart.plot(1);
-    secondPlot.rangeArea(secondMapping).name('Wind')
-      .fill('#ffd54f 0.65')
-      .lowStroke('1.5 #ffd54f')
-      .highStroke('1.5 #ffd54f')
-      .tooltip().useHtml(true).textFormatter(function() {
-      return '<br/><br/>' + this.seriesName +
-        '<br/><span style="color: #ccc">Max</span>: ' + this.high + ' m/s' +
-        '<br/><span style="color: #ccc">Avg.</span>: ' + this.getDataValue('value') + ' m/s' +
-        '<br/><span style="color: #ccc">Min</span>: ' + this.low + ' m/s';
-    });
-    secondPlot.marker(secondMapping).name('Average').fill('#ef6c00 0.8').stroke('#ef6c00').type('pentagon').tooltip(null);
-    secondPlot.height('30%');
-    secondPlot.xAxis().background().enabled(true);
+    let series = plot.candlestick(mapping).name('CSCO');
+    series.legendItem().iconType('risingfalling');
 
     // create scroller series with mapped data
-    this.chart.scroller().rangeStepArea(firstMapping);
+    this.chart.scroller().candlestick(mapping);
 
     // set chart selected date/time range
     this.chart.selectRange('2007-01-03', '2007-05-20');
@@ -71,7 +54,7 @@ export default Ember.Route.extend({
   },
 
   afterChartDraw: function(chart){
-    // // create range picker
+    // create range picker
     let rangePicker = anychart.ui.rangePicker();
     // init range picker
     rangePicker.render(chart);
