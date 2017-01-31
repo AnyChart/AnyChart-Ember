@@ -1,8 +1,43 @@
 {
   "name": "ember-anychart",
+  "description": "Ember component for the AnyChart JavaScript charting library.",
+  "authors": [
+    "AnyChart"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/AnyChart/AnyChart-Ember",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "yarn.lock"
+  ],
   "dependencies": {
     "ember": "~2.10.0",
     "ember-cli-shims": "0.1.3",
     "proj4": "~2"
-  }
+  },
+  "keywords": [
+    "anychart",
+    "anystock",
+    "anygantt",
+    "anymap",
+    "charts",
+    "javascript charts",
+    "ajax charts",
+    "plots",
+    "line charts",
+    "bar charts",
+    "pie charts",
+    "javascript plots",
+    "ajax plots",
+    "javascript",
+    "react",
+    "SVG",
+    "HTML5",
+    "framework",
+    "VML"
+  ]
 }
