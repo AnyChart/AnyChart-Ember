@@ -3,6 +3,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addPackageToProject('proj4');
+    return this.addBowerPackageToProject('proj4');
   }
 };
