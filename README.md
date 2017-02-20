@@ -27,6 +27,9 @@ To install **ember-anychart** plugin into an ember project, navigate to project 
 *  `ember install --save ember-anychart`
 * `yarn add ember-anychart`
 
+And complete installation by generation plugin blueprint
+* `ember generate ember-anychart`
+
 ## Usage
 
 Use the following custom element in a Handlebars template file:
