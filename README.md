@@ -109,4 +109,4 @@ Then open browser at *http://localhost:4200*
 
 ## License
 
-[© AnyChart.com - JavaScript charts](http://www.anychart.com). All rights reserved.
+[© AnyChart.com - JavaScript charts](http://www.anychart.com). Ember Plugin is released under the [Apache 2.0 License](https://github.com/AnyChart/AnyChart-Ember/blob/master/LICENSE.md).
