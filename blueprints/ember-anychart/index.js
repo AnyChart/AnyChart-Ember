@@ -3,6 +3,6 @@ module.exports = {
   },
 
   afterInstall: function() {
-    return this.addBowerPackageToProject('proj4');
+    return this.addBowerPackagesToProject([{name: 'anychart', target: '~7'}, {name: 'proj4', target: '~2'}]);
   }
 };

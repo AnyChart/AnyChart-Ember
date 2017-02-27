@@ -17,6 +17,7 @@
   "dependencies": {
     "ember": "~2.10.0",
     "ember-cli-shims": "0.1.3",
+    "anychart": "~7",
     "proj4": "~2"
   },
   "keywords": [
