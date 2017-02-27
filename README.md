@@ -23,11 +23,11 @@ You can install **ember-anychart** plugin using **npm** or **yarn** package mana
 ###Install plugin into a project
 To install **ember-anychart** plugin into an ember project, navigate to project directory and install the package: 
 
+* `ember install --save ember-anychart`
 * `npm install --save ember-anychart`
-*  `ember install --save ember-anychart`
 * `yarn add ember-anychart`
 
-And complete installation by generation plugin blueprint
+If you installed plugin via **npm** or **yarn** then you should complete installation by generation plugin blueprint
 * `ember generate ember-anychart`
 
 ## Usage
