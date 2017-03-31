@@ -75,6 +75,7 @@ ember server
 Then open browser at *http://localhost:4200*
 
 ###Sample files
+
 | Example | Files | Description |
 | :--- |:---| :----|
 |**Simple chart**|*ember-anychart/tests/dummy/app/routes/simple-chart.js*<br>*ember-anychart/tests/dummy/app/templates/simple-chart.hbs*|Shows how to create a simple Line Chart by creating chart instance and passing it to *instance* attribute of the component.|
