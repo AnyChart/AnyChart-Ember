@@ -7,7 +7,7 @@ AnyChart Component for Ember CLI provides an easy way to use [AnyChart JavaScrip
 
 ## Download and install
 
-###Install dependencies
+### Install dependencies
 
 First, you need to download and install [NodeJS](https://nodejs.org/en/) if you don’t have it installed already.
 
@@ -16,13 +16,13 @@ To use the **ember-anychart** plugin, you should also have [Bower](https://bower
 * `npm install -g bower`  
 * `npm install -g ember-cli`
 
-###Install plugin globally
+### Install plugin globally
 
 You can install **ember-anychart** plugin using **npm** or **yarn** package managers:  
 * `npm install -g ember-anychart`  
 * `yarn global add ember-anychart`  
 
-###Install plugin into a project
+### Install plugin into a project
 
 To install **ember-anychart** plugin into an ember project, navigate to project directory and install the package: 
 
@@ -51,7 +51,7 @@ Use the following custom element in a Handlebars template file:
 {{ember-anychart instance=model.chart id="chart-container" class="custom-styled-container"}}
 ```
 
-###Component attributes
+### Component attributes
 
 | Attribute | Type | Description | Required |
 | :------------- |:-------------:| :----| :---- |
@@ -60,11 +60,11 @@ Use the following custom element in a Handlebars template file:
 | **afterDraw** | Function | Chart after draw callback function. This parameter is ignored when 'instance' param is defined and it is a stage instance. | optional |
 | A chart or stage settings | | You can use any chart or stage settings as an attribute, like *data*, *title*, *label*, *legend* and so on. | optional |
 
-##Examples
+## Examples
 
 Please see a sample applications in the *ember-anychart/tests/dummy/* folder.
 
-###How to run a sample application
+### How to run a sample application
 
 You should have NodeJs, Ember, and Bower installed. See [Download and install](#download-and-install).
 
@@ -79,7 +79,7 @@ ember server
 
 Then open browser at *http://localhost:4200*
 
-###Sample files
+### Sample files
 
 | Example | Files | Description |
 | :--- |:---| :----|
