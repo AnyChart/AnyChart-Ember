@@ -8,6 +8,7 @@ AnyChart Component for Ember CLI provides an easy way to use [AnyChart JavaScrip
 ## Download and install
 
 ###Install dependencies
+
 First, you need to download and install [NodeJS](https://nodejs.org/en/) if you don’t have it installed already.
 
 To use the **ember-anychart** plugin, you should also have [Bower](https://bower.io/) and [Ember CLI](https://ember-cli.com/) installed.
@@ -16,11 +17,13 @@ To use the **ember-anychart** plugin, you should also have [Bower](https://bower
 * `npm install -g ember-cli`
 
 ###Install plugin globally
+
 You can install **ember-anychart** plugin using **npm** or **yarn** package managers:  
 * `npm install -g ember-anychart`  
 * `yarn global add ember-anychart`  
 
 ###Install plugin into a project
+
 To install **ember-anychart** plugin into an ember project, navigate to project directory and install the package: 
 
 * `ember install --save ember-anychart`
@@ -49,6 +52,7 @@ Use the following custom element in a Handlebars template file:
 ```
 
 ###Component attributes
+
 | Attribute | Type | Description | Required |
 | :------------- |:-------------:| :----| :---- |
 | **instance** | Object | A chart or a stage instance. If you use this parameter, then *type* attribute is ignored. | **Required** (if *type* is not defined) |
@@ -61,6 +65,7 @@ Use the following custom element in a Handlebars template file:
 Please see a sample applications in the *ember-anychart/tests/dummy/* folder.
 
 ###How to run a sample application
+
 You should have NodeJs, Ember, and Bower installed. See [Download and install](#download-and-install).
 
 Clone and install:
