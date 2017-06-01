@@ -33,14 +33,14 @@ export default Ember.Route.extend({
     // set chart title text settings
     this.chart.title('Top 3 Products with Region Sales Data');
 
-    this.chart.yAxis().labels().textFormatter("${%Value}");
+    this.chart.yAxis().labels().format("${%Value}");
 
     // set titles for Y-axis
     this.chart.yAxis().title('Revenue');
 
     // set up tooltip position and text formatter
     this.chart.tooltip().position('top').anchor('bottom').offsetX(0).offsetY(5).positionMode('point');
-    this.chart.tooltip().textFormatter("{%SeriesName}: ${%Value}{groupsSeparator:\\,}");
+    this.chart.tooltip().format("{%SeriesName}: ${%Value}{groupsSeparator:\\,}");
 
     // turn on legend and tune it
     this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 20, 0]);
@@ -54,7 +54,7 @@ export default Ember.Route.extend({
       series.hoverLabels().enabled(false);
 
       let seriesLabels = series.labels();
-      seriesLabels.enabled(true).position('top').anchor('bottom').textFormatter("${%Value}{groupsSeparator:\\,}");
+      seriesLabels.enabled(true).position('top').anchor('bottom').format("${%Value}{groupsSeparator:\\,}");
     };
 
     // create first series with mapped data

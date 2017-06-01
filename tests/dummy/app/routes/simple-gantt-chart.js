@@ -36,14 +36,14 @@ export default Ember.Route.extend({
     thirdColumn.title('Start Time');
     thirdColumn.width(90);
     thirdColumn.cellTextSettings().hAlign('right');
-    thirdColumn.textFormatter(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
+    thirdColumn.format(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
 
     // set fourth column settings
     let fourthColumn = dataGrid.column(3);
     fourthColumn.title('End Time');
     fourthColumn.width(90);
     fourthColumn.cellTextSettings().hAlign('right');
-    fourthColumn.textFormatter(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
+    fourthColumn.format(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
 
     return {
       chart: this.chart,

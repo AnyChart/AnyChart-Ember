@@ -46,13 +46,13 @@ export default Ember.Route.extend({
       this.chart1.yAxis().title('Revenue');
 
       // set yAxis labels formatter
-      this.chart1.yAxis().labels().textFormatter("${%Value}");
+      this.chart1.yAxis().labels().format("${%Value}");
 
       // create area series with passed data
       let series = this.chart1.column(data);
 
       // set series tooltip settings
-      series.tooltip().textFormatter("${%Value}{groupsSeparator:\\,}");
+      series.tooltip().format("${%Value}{groupsSeparator:\\,}");
 
       // set up chart's size
       this.chart1.width(800);

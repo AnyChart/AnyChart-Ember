@@ -104,7 +104,7 @@ export default Ember.Route.extend({
     series.selectStroke(anychart.color.darken('#c2185b'));
 
     series.tooltip().textWrap('byLetter').useHtml(true);
-    series.tooltip().textFormatter(function () {
+    series.tooltip().format(function () {
       return '<span style="font-size: 13px">' + this.value + ' litres per capita</span>';
     });
     series.colorScale(anychart.scales.linearColor('#c2e9fb', '#81d4fa', '#01579b', '#002746'));
