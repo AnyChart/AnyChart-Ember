@@ -92,6 +92,11 @@ Then open browser at *http://localhost:4200*
 |**Geographical colored map**|*ember-anychart/tests/dummy/app/routes/geographical-colored-map.js*<br>*ember-anychart/tests/dummy/app/templates/geographical-colored-map.hbs*<br>*ember-anychart/tests/dummy/public/united_states_of_america.topo.json*|Colored Geographical Map with geo data loaded from a file.|
 |**Simple gantt chart** |*ember-anychart/tests/dummy/app/routes/simple-gantt-chart.js*<br>*ember-anychart/tests/dummy/app/templates/simple-gantt-chart.hbs*|Simple Gantt Chart.|
 
+## Versions
+
+* Code in the *v1.1.1* branch works with Ember version 2.10
+* Code in the *master* branch works with Ember version 2.14 and higher
+
 ## Contacts
 
 * Web: [www.anychart.com](www.anychart.com)
