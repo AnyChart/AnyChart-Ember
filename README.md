@@ -1,9 +1,9 @@
-[<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://anychart.com)
+[<img src="https://cdn.anychart.com/images/logo-transparent-segoe.png?2" width="234px" alt="AnyChart - Robust JavaScript/HTML5 Chart library for any project">](https://www.anychart.com)
 
 Ember Plugin for AnyChart
 =========================
 
-AnyChart Component for Ember CLI provides an easy way to use [AnyChart JavaScript Charts](http://anychart.com) with [Ember Framework](http://emberjs.com/).  
+AnyChart Component for Ember CLI provides an easy way to use [AnyChart JavaScript Charts](https://www.anychart.com) with [Ember Framework](http://emberjs.com/).  
 
 ## Download and install
 
@@ -107,17 +107,18 @@ Then open browser at *http://localhost:4200*
 
 ## Links
 
-* [AnyChart Website](http://www.anychart.com)
-* [Download AnyChart](http://www.anychart.com/download/)
-* [AnyChart Licensing](http://www.anychart.com/buy/)
-* [AnyChart Support](http://www.anychart.com/support/)
+* [AnyChart Website](https://www.anychart.com)
+* [Download AnyChart](https://www.anychart.com/download/)
+* [AnyChart Licensing](https://www.anychart.com/buy/)
+* [AnyChart Support](https://www.anychart.com/support/)
 * [Report Issues](https://github.com/AnyChart/AnyChart-Ember/issues)
-* [AnyChart Playground](http://playground.anychart.com)
-* [AnyChart Documentation](http://docs.anychart.com)
-* [AnyChart API Reference](http://api.anychart.com)
-* [AnyChart Sample Solutions](http://www.anychart.com/solutions/)
-* [AnyChart Integrations](http://www.anychart.com/integrations/)
+* [AnyChart Playground](https://playground.anychart.com)
+* [AnyChart Documentation](https://docs.anychart.com)
+* [AnyChart API Reference](https://api.anychart.com)
+* [AnyChart Sample Solutions](https://www.anychart.com/solutions/)
+* [AnyChart Integrations](https://www.anychart.com/integrations/)
 
 ## License
 
-[© AnyChart.com - JavaScript charts](http://www.anychart.com). Ember Plugin is released under the [Apache 2.0 License](https://github.com/AnyChart/AnyChart-Ember/blob/master/LICENSE.md).
+[© AnyChart.com - JavaScript charts](https://www.anychart.com). 
+[![Analytics](https://ga-beacon.appspot.com/UA-228820-4/Plugins/Ember?pixel&useReferer)](https://github.com/igrigorik/ga-beacon)
