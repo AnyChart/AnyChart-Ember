@@ -29,10 +29,10 @@ export default Ember.Route.extend({
 
     // create first plot on the chart
     let plot = this.chart.plot(0);
-    plot.grid().enabled(true);
-    plot.grid(1).enabled(true).layout('vertical');
-    plot.minorGrid().enabled(true);
-    plot.minorGrid(1).enabled(true).layout('vertical');
+    plot.xGrid().enabled(true);
+    plot.yGrid().enabled(true);
+    plot.xMinorGrid().enabled(true);
+    plot.yMinorGrid().enabled(true);
 
     // create EMA indicators with period 50
     plot.ema(dataTable.mapAs({'value': 4})).series().stroke('1.5 #455a64');

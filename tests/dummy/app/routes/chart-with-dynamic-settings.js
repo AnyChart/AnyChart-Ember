@@ -51,7 +51,7 @@ export default Ember.Route.extend({
     // helper function to setup label settings for all series
     let setupSeries = function(series, name) {
       series.name(name);
-      series.hoverLabels().enabled(false);
+      series.hovered().labels().enabled(false);
 
       let seriesLabels = series.labels();
       seriesLabels.enabled(true).position('top').anchor('bottom').format("${%Value}{groupsSeparator:\\,}");

@@ -98,12 +98,12 @@ export default Ember.Route.extend({
     ]);
 
     let series = this.chart.choropleth(dataSet);
-    series.hoverFill('#f48fb1');
-    series.hoverStroke(anychart.color.darken('#f48fb1'));
-    series.selectFill('#c2185b');
-    series.selectStroke(anychart.color.darken('#c2185b'));
+    series.hovered().fill('#f48fb1');
+    series.hovered().stroke(anychart.color.darken('#f48fb1'));
+    series.selected().fill('#c2185b');
+    series.selected().stroke(anychart.color.darken('#c2185b'));
 
-    series.tooltip().textWrap('byLetter').useHtml(true);
+    series.tooltip().useHtml(true);
     series.tooltip().format(function () {
       return '<span style="font-size: 13px">' + this.value + ' litres per capita</span>';
     });

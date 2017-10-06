@@ -8,8 +8,8 @@ module.exports = {
 
     app.import('bower_components/proj4/dist/proj4.js');
 
-    app.import('bower_components/anychart/dist/anychart-bundle.min.js');
-    app.import('bower_components/anychart/dist/anychart-ui.min.css');
+    app.import('bower_components/anychart/dist/js/anychart-bundle.min.js');
+    app.import('bower_components/anychart/dist/css/anychart-ui.min.css');
 
     app.import('vendor/anychart/fonts.css');
     app.import('vendor/anychart/fonts/anychart.eot', {destDir: '/assets/fonts'});

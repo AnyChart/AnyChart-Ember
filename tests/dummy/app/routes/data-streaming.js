@@ -30,7 +30,7 @@ export default Ember.Route.extend({
       // create first series with mapped data
       let series_1 = this.chart.stepLine(seriesData_1);
       series_1.color('#ff0e09').name('Red');
-      series_1.selectMarkers().enabled(false);
+      series_1.selected().markers().enabled(false);
 
       // map data for the second series, takes value from the second column of data set
       let seriesData_2 = this.dataSet.mapAs({value: [1]});
@@ -38,7 +38,7 @@ export default Ember.Route.extend({
       // create second series with mapped data
       let series_2 = this.chart.splineArea(seriesData_2);
       series_2.fill('#00a0ff 0.4').name('Blue');
-      series_2.selectMarkers().enabled(false);
+      series_2.selected().markers().enabled(false);
     }
   },
 

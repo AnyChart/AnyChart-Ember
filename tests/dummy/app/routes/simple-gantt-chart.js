@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     this.chart = anychart.ganttProject();
 
     // create data tree on our data
-    let treeData = anychart.data.tree(this._getData(), anychart.enums.TreeFillingMethod.AS_TABLE);
+    let treeData = anychart.data.tree(this._getData(), 'as-table');
 
     // set data for the chart
     this.chart.data(treeData);

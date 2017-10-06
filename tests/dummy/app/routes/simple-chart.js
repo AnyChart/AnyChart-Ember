@@ -70,17 +70,17 @@ export default Ember.Route.extend({
       // create first series with mapped data
       let series_1 = this.chart.line(seriesData_1);
       series_1.name('Brandy');
-      series_1.hoverMarkers().enabled(true).type('circle').size(4);
+      series_1.hovered().markers().enabled(true).type('circle').size(4);
 
       // create second series with mapped data
       let series_2 = this.chart.line(seriesData_2);
       series_2.name('Whiskey');
-      series_2.hoverMarkers().enabled(true).type('circle').size(4);
+      series_2.hovered().markers().enabled(true).type('circle').size(4);
 
       // create third series with mapped data
       let series_3 = this.chart.line(seriesData_3);
       series_3.name('Tequila');
-      series_3.hoverMarkers().enabled(true).type('circle').size(4);
+      series_3.hovered().markers().enabled(true).type('circle').size(4);
 
       // turn the legend on
       this.chart.legend().enabled(true).fontSize(13).padding([0, 0, 10, 0]);
