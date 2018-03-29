@@ -24,26 +24,26 @@ export default Ember.Route.extend({
     let firstColumn = dataGrid.column(0);
     firstColumn.title('#');
     firstColumn.width(30);
-    firstColumn.cellTextSettings().hAlign('center');
+    firstColumn.labels().hAlign('center');
 
     // set second column settings
     let secondColumn = dataGrid.column(1);
-    secondColumn.cellTextSettings().hAlign('left');
+    secondColumn.labels().hAlign('left');
     secondColumn.width(180);
 
     // set third column settings
     let thirdColumn = dataGrid.column(2);
     thirdColumn.title('Start Time');
     thirdColumn.width(90);
-    thirdColumn.cellTextSettings().hAlign('right');
-    thirdColumn.format(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
+    thirdColumn.labels().hAlign('right');
+    thirdColumn.labels().format(function() {return anychart.format.dateTime(this.item.get('actualStart'), "yyyy.MM.dd");});
 
     // set fourth column settings
     let fourthColumn = dataGrid.column(3);
     fourthColumn.title('End Time');
     fourthColumn.width(90);
-    fourthColumn.cellTextSettings().hAlign('right');
-    fourthColumn.format(function(item) {return anychart.format.dateTime(item.get('actualStart'), "yyyy.MM.dd");});
+    fourthColumn.labels().hAlign('right');
+    fourthColumn.labels().format(function() {return anychart.format.dateTime(this.item.get('actualStart'), "yyyy.MM.dd");});
 
     return {
       chart: this.chart,
